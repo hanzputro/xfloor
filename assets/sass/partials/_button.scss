@@ -1,0 +1,40 @@
+
+// button
+button,a{
+    border:none;
+    @include delay (.2s all);
+        &.share--btn{
+            display: inline-block;
+            font-size:16px;
+            font-weight:100;
+            color:#fff;
+            text-align: center;
+            padding:8px 14px;
+            background:rgba(0, 0, 0, 0.2);
+            border-radius:25px;            
+            &:hover{
+                background:rgba(0, 0, 0, 0.4);
+            }
+        }
+        &.newsletter--btn{
+            @extend .share--btn;
+            width:29%;
+            height:50px;
+            font-family: calibri;
+            font-size:22px;
+            background:#ff6633;
+            box-shadow: 0px 3px 0px #c1431f;
+            border-radius:3px;
+            &:hover{
+                background:#ec5d2d;
+            }
+        }
+}
+
+
+/** responsive **/
+
+/* (1024px above)----------- */
+@media only screen 
+and (min-width : 1024px) {     
+}

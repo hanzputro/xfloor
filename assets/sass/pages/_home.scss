@@ -1,0 +1,195 @@
+// home page
+
+.pagination__page{
+	position: fixed;
+	top: 50%;
+	@include transform (translate(-50%, -50%));
+	right:25px;
+	padding:5px;
+	border-radius:10px;
+	background: rgba(0,0,0,0.1);
+		ul.pagination__page--ul{
+				li.pagination__page--li{
+					list-style: none;
+						a{
+							display: block;
+							margin:8px 0;
+							&:before{
+								content:"";
+								display: inherit;
+								position:relative;
+								border-radius:5px;
+								width:10px;
+								height:10px;
+								color: #ff6633;
+								background: #ff6633;
+
+							}
+						}
+				}
+				li.active{
+						a{
+							&:before{
+								content:"";
+								display: inherit;
+								position:relative;
+								border-radius:5px;
+								width:10px;
+								height:10px;
+								color: #fff;
+								background: #fff;
+
+							}
+						}
+				}
+		}
+}
+
+.page1__wrapper{
+	display: block;
+	min-width:100%;
+	height:100vh;
+	margin:0 0 0 0;
+	text-align:center;
+	// border-bottom:0vh solid #fff;
+	background:url("../images/page1--bg.jpg") no-repeat;
+	background-attachment: fixed;
+	background-position: top center; 
+	background-size: cover;
+	background-color:#ff6633;
+		.page1{
+			display: inline-block;
+			width: 1100px;
+			margin:20vh auto 0 auto;
+			text-align:left;
+				.description__page{
+					display: inline-block;
+					float:left;
+					width:58%;
+						h1{
+							color:#fff;
+							text-shadow: 0px 1px 3px #777;
+								font{
+									color:#ff6633;
+									font-weight:800;
+									text-decoration: underline;
+									text-shadow: 0px 1px 1px #000;
+								}
+						}
+						p{
+							width:90%;							
+							text-shadow: 0px 1px 3px #444;
+						}
+				}
+				.ss__page{
+					display: inline-block;
+					float:right;
+					text-align:center; 
+					width:42%;
+					margin:6vh 0 0 0;
+						img{
+							max-width:100%;
+							height:auto;
+						}
+				}
+			
+		}
+}
+.page2__wrapper{
+	@extend .page1__wrapper;
+	min-width:100%;
+	height:100vh;
+	background:#fff;
+		.page2{
+			@extend .page1;
+				.description__page{
+						h1{
+							color:#424242;
+							text-shadow: 0px 1px 3px #777;
+								// font{
+								// 	color:#ff6633;
+								// 	font-weight:800;
+								// 	text-decoration: underline;
+								// 	text-shadow: 0px 1px 1px #000;
+								// }
+						}
+				}
+				.ss__page{
+
+				}
+			
+		}
+}
+.page3__wrapper{
+	@extend .page1__wrapper;
+	background:#ff6633;
+		.page3{
+			@extend .page1;
+				.description__page{
+
+				}
+				.ss__page{
+
+				}
+			
+		}
+}
+.page4__wrapper{
+	@extend .page1__wrapper;
+	background:#fff;
+		.page4{
+			@extend .page1;
+				.description__page{
+
+				}
+				.ss__page{
+
+				}
+			
+		}
+}
+.page5__wrapper{
+	@extend .page1__wrapper;
+	background:#272625;
+		.page5{
+			@extend .page1;
+				.description__page{
+
+				}
+				.ss__page{
+
+				}
+			
+		}
+}
+/** responsive **/
+
+/* (0px above)----------- */
+@media only screen 
+and (min-width : 0px) {
+}
+
+/* (480px above)----------- */
+@media only screen 
+and (min-width : 480px) {
+}
+
+/* (768px above)----------- */
+@media only screen 
+and (min-width : 768px) {
+}
+
+/* (1024px above)----------- */
+@media only screen 
+and (min-width : 1024px) {
+}
+
+/* (1360px above)----------- */
+@media only screen 
+and (min-width : 1360px) {
+}
+
+/* (1900px above)----------- */
+@media only screen 
+and (min-width : 1900px) {
+}

@@ -1,0 +1,24 @@
+// Reset
+@import "reset/normalize";
+
+// modules
+// @import "modules/breakpoint";
+// @import "modules/sprite";
+// @import "modules/color-palette";
+// @import "modules/animate";
+// @import "modules/fonts";
+
+// partials
+@import "partials/mixin";
+@import "partials/typography";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/form";
+@import "partials/button";
+@import "partials/icons";
+
+// page
+@import "pages/home";
+
+// vendor
+@import "vendor/jquery.fullPage";
