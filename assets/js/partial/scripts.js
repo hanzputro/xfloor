@@ -6,7 +6,8 @@ $(document).ready(function(){
     // });
     $('#fullpage').fullpage({
         'verticalCentered': false,
-        'css3': true,
+        'css3': false,
+        'autoScrolling': false,
         'sectionsColor': ['#ff6633', '#fff', '#ff6633', '#fff','#272625'],
         'navigation': true,
         'navigationPosition': 'right',
