@@ -5,7 +5,6 @@
 /*
  * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
 article,
 aside,
 details,
@@ -437,10 +436,10 @@ table {
 h1 {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 60px;
-  margin: 10px 0 10px 0;
+  font-size: 46px;
+  font-weight: 100;
+  line-height: 50px;
+  margin: 10px 0 20px 0;
   padding: 0 0 0 0;
 }
 
@@ -497,9 +496,11 @@ ul {
 
 p {
   font-family: calibri;
-  font-size: 18px;
+  font-size: 15px;
+  line-height: normal;
   color: #fff;
   font-weight: 100;
+  margin: 8px 0;
 }
 p.p--small {
   color: #848c94;
@@ -509,7 +510,7 @@ p.p--small {
 }
 p.info {
   font-family: calibri;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 100;
   color: #fbfaaf;
   margin: 5px 0;
@@ -697,7 +698,7 @@ article.article--career ul li {
   top: 0;
   width: 100%;
   height: auto;
-  padding: 20px 0;
+  padding: 5px 0 0 0;
   z-index: 100;
 }
 .header__wrapper .header {
@@ -714,7 +715,7 @@ article.article--career ul li {
   display: inline-block;
   width: 100px;
   float: right;
-  margin: 16px 0;
+  margin: 8px 0 0 0;
 }
 .header__wrapper .header .share__header a.share--btn, .header__wrapper .header .share__header a.newsletter--btn {
   display: table;
@@ -1076,24 +1077,37 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   background: #fff;
 }
 
-.ss__page {
-  max-width: 180px;
-  height: 200px;
-  top: 50%;
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  right: 50%;
-  left: 50%;
+.ss__wrapper {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  padding-right: 20px;
+  z-index: 1;
 }
-.ss__page1 {
-  background-image: "assets/images/frame_page1.png" no-repeat;
+.ss__wrapper .ss__page {
+  position: relative;
+  width: 700px;
+  height: 100vh;
+  margin: 0 0 0 0;
+  padding: 0;
+  background-attachment: fixed !important;
+  background-position: 85% 100% !important;
+}
+.ss__wrapper .ss__page.ss__page1 {
+  background: url("../images/frame_page1.png") no-repeat;
+}
+.ss__wrapper .ss__page.ss__page2 {
+  background: url("../images/frame_page2.png") no-repeat;
+}
+.ss__wrapper .ss__page.ss__page3 {
+  background: url("../images/frame_page3.png") no-repeat;
+}
+.ss__wrapper .ss__page.ss__page4 {
+  background: url("../images/frame_page2.png") no-repeat;
 }
 
 .page1__wrapper, .page2__wrapper, .page4__wrapper, .page3__wrapper, .page5__wrapper {
-  position: relative;
+  position: relative !important;
   min-width: 100%;
   height: 100vh !important;
   margin: 0 0 0 0;
@@ -1105,13 +1119,17 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   background-color: #ff6633;
 }
 .page1__wrapper .page1, .page2__wrapper .page1, .page4__wrapper .page1, .page3__wrapper .page1, .page5__wrapper .page1, .page2__wrapper .page2, .page4__wrapper .page2, .page4__wrapper .page4, .page3__wrapper .page3, .page5__wrapper .page5 {
+  position: relative;
   display: inline-block;
-  width: 1100px;
-  margin: 20vh auto 0 auto;
+  height: 100vh;
+  width: 960px;
+  margin: 100px 0 0px 0;
   text-align: left;
 }
 .page1__wrapper .page1 .description__page, .page2__wrapper .page1 .description__page, .page4__wrapper .page1 .description__page, .page3__wrapper .page1 .description__page, .page5__wrapper .page1 .description__page, .page2__wrapper .page2 .description__page, .page4__wrapper .page2 .description__page, .page4__wrapper .page4 .description__page, .page3__wrapper .page3 .description__page, .page5__wrapper .page5 .description__page {
   display: inline-block;
+  float: left;
+  width: 575px;
 }
 .page1__wrapper .page1 .description__page h1, .page2__wrapper .page1 .description__page h1, .page4__wrapper .page1 .description__page h1, .page3__wrapper .page1 .description__page h1, .page5__wrapper .page1 .description__page h1, .page2__wrapper .page2 .description__page h1, .page4__wrapper .page2 .description__page h1, .page4__wrapper .page4 .description__page h1, .page3__wrapper .page3 .description__page h1, .page5__wrapper .page5 .description__page h1 {
   color: #fff;
@@ -1124,8 +1142,9 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   text-shadow: 0px 1px 1px #000;
 }
 .page1__wrapper .page1 .description__page p, .page2__wrapper .page1 .description__page p, .page4__wrapper .page1 .description__page p, .page3__wrapper .page1 .description__page p, .page5__wrapper .page1 .description__page p, .page2__wrapper .page2 .description__page p, .page4__wrapper .page2 .description__page p, .page4__wrapper .page4 .description__page p, .page3__wrapper .page3 .description__page p, .page5__wrapper .page5 .description__page p {
-  width: 90%;
+  width: 80%;
   text-shadow: 0px 1px 3px #444;
+  text-shadow: none;
 }
 
 .page2__wrapper, .page4__wrapper {
@@ -1282,7 +1301,7 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   padding: 5px 0;
   border-radius: 15px;
   -webkit-transform: translate3d(0, 0, 0);
-  background: rgba(0, 0, 0, 0.1) !important;
+  background: rgba(0, 0, 0, 0.15) !important;
 }
 
 #fp-nav.right {
@@ -1319,7 +1338,7 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   display: block;
   width: 14px;
   height: 13px;
-  margin: 7px;
+  margin: 3px 5px;
   position: relative;
 }
 
@@ -1346,6 +1365,7 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   width: 12px;
   margin: -6px 0 0 -6px;
   border-radius: 100%;
+  background: #fff;
 }
 
 #fp-nav ul li a span,
@@ -1353,13 +1373,13 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   border-radius: 50%;
   position: absolute;
   z-index: 1;
-  height: 4px;
-  width: 4px;
+  height: 8px;
+  width: 8px;
   border: 0;
-  background: #333;
+  background: #ff6633;
   left: 50%;
   top: 50%;
-  margin: -2px 0 0 -2px;
+  margin: -4px 0 0 -4px;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
@@ -1396,7 +1416,7 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
 }
 
 #fp-nav ul li .fp-tooltip.right {
-  right: 20px;
+  right: 24px;
 }
 
 #fp-nav ul li .fp-tooltip.left {

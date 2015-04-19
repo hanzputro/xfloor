@@ -1,14 +1,14 @@
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
 
 h1 {
     color: #fff;
     font-family: 'Open Sans', sans-serif;
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60px;
+    font-size: 46px;
+    font-weight: 100;
+    line-height: 50px;
     // letter-spacing: 1px;
-    margin:10px 0 10px 0;
+    margin:10px 0 20px 0;
     padding:0 0 0 0;
 }
 
@@ -70,9 +70,11 @@ ul{
 }
 p {
     font-family: calibri;
-    font-size: 18px;
+    font-size: 15px;
+    line-height:normal;
     color:#fff;
-    font-weight:100;    
+    font-weight:100;
+    margin:8px 0;    
     &.p--small {
         color: #848c94;
         font-size: 13px;
@@ -81,7 +83,7 @@ p {
     }
     &.info {
         font-family: calibri;
-        font-size: 18px;
+        font-size: 15px;
         font-weight:100;
         color:#fbfaaf;
         margin:5px 0;

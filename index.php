@@ -7,52 +7,42 @@
         <div class="main" id="fullpage">
 
                 <!-- pagination -->
-                <div class="pagination__page">
+                <!-- <div class="pagination__page">
                         <ul class="pagination__page--ul">
                                 <li class="pagination__page--li"><a href="" class="pagination__page--a"></a></li>
                                 <li class="pagination__page--li active"><a href="" class="pagination__page--a"></a></li>
                                 <li class="pagination__page--li"><a href="" class="pagination__page--a"></a></li>
                                 <li class="pagination__page--li"><a href="" class="pagination__page--a"></a></li>
                         </ul>
-                </div>
+                </div> -->
                 
                 <!-- screenshot -->
-               <!--  <div class="ss__wrapper">
+                <div class="ss__wrapper">
                         <div class="ss__page ss__page1">
-                                <img src="assets/images/frame_page1.png" alt="">
+                                <!-- <img src="assets/images/frame_page1.png" alt=""> -->
                         </div>
                         <div class="ss__page ss__page2">
-                                <img src="assets/images/frame_page2.png" alt="">
+                                <!-- <img src="assets/images/frame_page2.png" alt=""> -->
                         </div>
                         <div class="ss__page ss__page3">
-                                <img src="assets/images/frame_page3.png" alt="">
+                                <!-- <img src="assets/images/frame_page3.png" alt=""> -->
                         </div>
                         <div class="ss__page ss__page4">
-                                <img src="assets/images/frame_page3.png" alt="">
+                                <!-- <img src="assets/images/frame_page3.png" alt=""> -->
                         </div>
-                        <div class="ss__page ss__page5">
-                                <img src="assets/images/frame_page3.png" alt="">
-                        </div>
-                </div>  -->
+                </div> 
 
                 <!-- page1 -->
-                <div class="page1__wrapper section" id="section1">
-                        <div class="ss__page ss__page1"></div>
+                <div class="page1__wrapper section" id="section1">                        
                         <div class="page1">
                                 <div class="description__page">
                                         <h1 class="">The Brand New Way To <font>EXPLORE</font> Your Favorite Location</h1>
-                                        <br>
-                                        <p class="">
-                                                <i>
-                                                XFloor is the first social app 100% dedicated to perfecting the group social experience.<br><br>
-                                                Share photos, chat, and send picture messages with your group, as a group, and group-to-group.<br><br>
-                                                We'll coming this year!. Keep in touch.
-                                                </i>
-                                        </p>
-                                        <br>
+                                        <p><i>XFloor is the first social app 100% dedicated to perfecting the group social experience.</i></p>
+                                        <p><i>Share photos, chat, and send picture messages with your group, as a group, and group-to-group.</i></p>
+                                        <p><i>We'll coming this year!. Keep in touch.</i></p>
                                         <br>
                                         <span class="newsletter--span">
-                                                <p class="info">Send me link to download</p>
+                                                <p class="info"><i>Send me link to download</i></p>
                                                 <form action="">
                                                         <span class="form__input__wrapper">
                                                                 <input class="newsletter--input" placeholder="Enter Your Email" type="text"><button class="newsletter--btn">Notify Me</button>    
@@ -60,8 +50,8 @@
                                                 </form>   
                                         </span>                                        
                                 </div>
-                                
-                        </div>
+                                <!-- <div class="ss__page ss__page1"></div> -->                                
+                        </div>                        
                 </div>
 
                 <!-- page2 -->

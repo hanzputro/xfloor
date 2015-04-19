@@ -8,10 +8,10 @@ $(document).ready(function(){
         'verticalCentered': false,
         'css3': false,
         'autoScrolling': false,
-        'sectionsColor': ['#ff6633', '#fff', '#ff6633', '#fff','#272625'],
+        'sectionsColor': ['', '', '', '',''],
         'navigation': true,
         'navigationPosition': 'right',
-        'navigationTooltips': ['fullPage.js', 'Powerful', 'Amazing', 'Simple'],
+        'navigationTooltips': ['', '', '', '', ''],
 
         'afterLoad': function(anchorLink, index){
             if(index == 2){
