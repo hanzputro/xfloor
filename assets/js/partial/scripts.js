@@ -20,6 +20,9 @@ $(document).ready(function(){
         },
 
         'onLeave': function(index, nextIndex, direction){
+            if (index == 0 && direction == 'down'){
+                $('.ss__page1__left').eq(index -1).removeClass('moveDown').addClass('moveUp');
+            }
             if (index == 3 && direction == 'down'){
                 $('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
             }

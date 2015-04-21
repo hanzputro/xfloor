@@ -18,19 +18,27 @@
                 
                 <!-- screenshot -->
                 <div class="ss__wrapper">
-                        <div class="ss__page ss__page1">
-                                <!-- <img src="assets/images/frame_page1.png" alt=""> -->
-                        </div>
-                        <div class="ss__page ss__page2">
-                                <!-- <img src="assets/images/frame_page2.png" alt=""> -->
-                        </div>
-                        <div class="ss__page ss__page3">
-                                <!-- <img src="assets/images/frame_page3.png" alt=""> -->
-                        </div>
-                        <div class="ss__page ss__page4">
-                                <!-- <img src="assets/images/frame_page3.png" alt=""> -->
-                        </div>
-                </div> 
+                        <div class="ss__page__wrapper">
+                                <div class="ss__page">
+                                        <!-- <img src="assets/images/frame_page1.png" alt=""> -->
+                                        <div class="ss__page1"></div>
+                                        <div class="ss__page1__left"></div>
+                                        <div class="ss__page1__right"></div>
+                                </div>
+                                <div class="ss__page">
+                                        <!-- <img src="assets/images/frame_page2.png" alt=""> -->
+                                        <div class="ss__page2"></div>
+                                </div>
+                                <div class="ss__page">
+                                        <!-- <img src="assets/images/frame_page3.png" alt=""> -->
+                                        <div class="ss__page3"></div>
+                                </div>
+                                <div class="ss__page">
+                                        <!-- <img src="assets/images/frame_page3.png" alt=""> -->
+                                        <div class="ss__page4"></div>
+                                </div>
+                        </div> 
+                </div>                
 
                 <!-- page1 -->
                 <div class="page1__wrapper section" id="section1">                        

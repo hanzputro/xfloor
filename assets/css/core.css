@@ -433,13 +433,106 @@ table {
   border-spacing: 0;
 }
 
+@-webkit-keyframes moveLeft {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    left: -40px;
+    opacity: 1;
+  }
+}
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    left: -40px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes moveRight {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    right: -40px;
+    opacity: 1;
+  }
+}
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    right: -40px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes moveUp {
+  100% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes moveUp {
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animate__bottomtop__tooltips {
+  0% {
+    top: 10px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animate__bottomtop__tooltips {
+  0% {
+    top: 10px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    background: #ff0000;
+  }
+
+  100% {
+    background: #f1f1f1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    background: #ff0000;
+  }
+
+  100% {
+    background: #f1f1f1;
+  }
+}
 h1 {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
-  font-size: 46px;
+  font-size: 48px;
   font-weight: 100;
   line-height: 50px;
-  margin: 10px 0 20px 0;
+  margin: 10px 0 50px 0;
   padding: 0 0 0 0;
 }
 
@@ -1078,32 +1171,73 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
 }
 
 .ss__wrapper {
+  position: relative !important;
+  margin: 0 auto;
+  width: 960px;
+}
+.ss__wrapper .ss__page__wrapper {
   position: absolute !important;
+  width: 100%;
   top: 0;
   right: 0;
-  padding-right: 20px;
+}
+.ss__wrapper .ss__page__wrapper .ss__page {
+  position: relative;
+  float: right;
+  clear: both;
+  width: 350px;
+  height: 100vh;
+  background-attachment: fixed !important;
+  background-position: center right !important;
+}
+.ss__wrapper .ss__page__wrapper .ss__page .ss__page1, .ss__wrapper .ss__page__wrapper .ss__page .ss__page2, .ss__wrapper .ss__page__wrapper .ss__page .ss__page3, .ss__wrapper .ss__page__wrapper .ss__page .ss__page4 {
+  position: relative;
+  float: right;
+  clear: both;
+  width: 350px;
+  height: 100vh;
+  background-attachment: fixed !important;
+  background-position: center right !important;
+  background: url("../images/frame_page1.png") repeat-x;
+  z-index: 2;
+}
+.ss__wrapper .ss__page__wrapper .ss__page .ss__page1__left, .ss__wrapper .ss__page__wrapper .ss__page .ss__page1__right {
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-animation: moveLeft 0.5s ease forwards;
+  -moz-animation: moveLeft 0.5s ease forwards;
+  -o-animation: moveLeft 0.5s ease forwards;
+  animation: moveLeft 0.5s ease forwards;
+  opacity: 0;
+  left: 40px;
+  top: 50%;
+  position: absolute;
+  margin: auto;
+  background: url("../images/frame_page1_left.png") no-repeat;
+  width: 206px;
+  height: 500px;
   z-index: 1;
 }
-.ss__wrapper .ss__page {
-  position: relative;
-  width: 700px;
-  height: 100vh;
-  margin: 0 0 0 0;
-  padding: 0;
-  background-attachment: fixed !important;
-  background-position: 85% 100% !important;
+.ss__wrapper .ss__page__wrapper .ss__page .ss__page1__right {
+  left: initial !important;
+  -webkit-animation: moveRight 0.5s ease forwards;
+  -moz-animation: moveRight 0.5s ease forwards;
+  -o-animation: moveRight 0.5s ease forwards;
+  animation: moveRight 0.5s ease forwards;
+  right: 40px;
+  background: url("../images/frame_page1_right.png") no-repeat;
 }
-.ss__wrapper .ss__page.ss__page1 {
-  background: url("../images/frame_page1.png") no-repeat;
+.ss__wrapper .ss__page__wrapper .ss__page .ss__page2 {
+  background: url("../images/frame_page2.png") repeat-x;
 }
-.ss__wrapper .ss__page.ss__page2 {
-  background: url("../images/frame_page2.png") no-repeat;
+.ss__wrapper .ss__page__wrapper .ss__page .ss__page3 {
+  background: url("../images/frame_page3.png") repeat-x;
 }
-.ss__wrapper .ss__page.ss__page3 {
-  background: url("../images/frame_page3.png") no-repeat;
-}
-.ss__wrapper .ss__page.ss__page4 {
-  background: url("../images/frame_page2.png") no-repeat;
+.ss__wrapper .ss__page__wrapper .ss__page .ss__page4 {
+  background: url("../images/frame_page2.png") repeat-x;
 }
 
 .page1__wrapper, .page2__wrapper, .page4__wrapper, .page3__wrapper, .page5__wrapper {
@@ -1123,12 +1257,17 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   display: inline-block;
   height: 100vh;
   width: 960px;
-  margin: 100px 0 0px 0;
+  margin: 0 0;
   text-align: left;
 }
 .page1__wrapper .page1 .description__page, .page2__wrapper .page1 .description__page, .page4__wrapper .page1 .description__page, .page3__wrapper .page1 .description__page, .page5__wrapper .page1 .description__page, .page2__wrapper .page2 .description__page, .page4__wrapper .page2 .description__page, .page4__wrapper .page4 .description__page, .page3__wrapper .page3 .description__page, .page5__wrapper .page5 .description__page {
-  display: inline-block;
-  float: left;
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: relative;
+  top: 50%;
   width: 575px;
 }
 .page1__wrapper .page1 .description__page h1, .page2__wrapper .page1 .description__page h1, .page4__wrapper .page1 .description__page h1, .page3__wrapper .page1 .description__page h1, .page5__wrapper .page1 .description__page h1, .page2__wrapper .page2 .description__page h1, .page4__wrapper .page2 .description__page h1, .page4__wrapper .page4 .description__page h1, .page3__wrapper .page3 .description__page h1, .page5__wrapper .page5 .description__page h1 {
@@ -1145,6 +1284,9 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   width: 80%;
   text-shadow: 0px 1px 3px #444;
   text-shadow: none;
+}
+.page1__wrapper .page1 .description__page .newsletter--span, .page2__wrapper .page1 .description__page .newsletter--span, .page4__wrapper .page1 .description__page .newsletter--span, .page3__wrapper .page1 .description__page .newsletter--span, .page5__wrapper .page1 .description__page .newsletter--span, .page2__wrapper .page2 .description__page .newsletter--span, .page4__wrapper .page2 .description__page .newsletter--span, .page4__wrapper .page4 .description__page .newsletter--span, .page3__wrapper .page3 .description__page .newsletter--span, .page5__wrapper .page5 .description__page .newsletter--span {
+  display: inline-block;
 }
 
 .page2__wrapper, .page4__wrapper {

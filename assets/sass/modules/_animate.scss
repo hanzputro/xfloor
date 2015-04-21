@@ -1,4 +1,26 @@
 
+// move left
+@-webkit-keyframes moveLeft {
+	0% { opacity:0;}
+	100% { left:-40px; opacity:1;}
+}
+
+@keyframes moveLeft {
+	0% { opacity:0;}
+	100% { left:-40px; opacity:1;}
+}
+
+// move right
+@-webkit-keyframes moveRight {
+	0% { opacity:0;}
+	100% { right:-40px; opacity:1;}
+}
+
+@keyframes moveRight {
+	0% { opacity:0;}
+	100% { right:-40px; opacity:1;}
+}
+
 // animate bottom to up masonry
 @-webkit-keyframes moveUp {
 	0% { }
