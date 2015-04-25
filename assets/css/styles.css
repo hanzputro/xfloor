@@ -481,59 +481,41 @@ table {
     opacity: 1;
   }
 }
-@-webkit-keyframes moveUp {
-  100% {
-    -webkit-transform: translateY(0);
-    opacity: 1;
-  }
+.fromtop {
+  opacity: 0;
+  margin-top: -40px;
 }
-@keyframes moveUp {
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes animate__bottomtop__tooltips {
-  0% {
-    top: 10px;
-    opacity: 0;
-  }
 
-  100% {
-    top: 0px;
-    opacity: 1;
-  }
+.frombottom {
+  opacity: 0;
+  margin-top: 40px;
 }
-@-webkit-keyframes animate__bottomtop__tooltips {
-  0% {
-    top: 10px;
-    opacity: 0;
-  }
 
-  100% {
-    top: 0px;
-    opacity: 1;
-  }
+.fromleft {
+  opacity: 0;
+  margin-left: -30px;
 }
-@keyframes blink {
-  0% {
-    background: #ff0000;
-  }
 
-  100% {
-    background: #f1f1f1;
-  }
+.fromright {
+  opacity: 0;
+  margin-left: 20px;
 }
-@-webkit-keyframes blink {
-  0% {
-    background: #ff0000;
-  }
 
-  100% {
-    background: #f1f1f1;
-  }
+.tonormal {
+  opacity: 1;
+  margin: initial;
 }
+
+.toleft {
+  opacity: 1;
+  left: -30px;
+}
+
+.toright {
+  opacity: 1;
+  right: -30px;
+}
+
 h1 {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
@@ -803,7 +785,6 @@ article.article--career ul li {
   z-index: 100;
 }
 .header__wrapper .header {
-  width: 1100px;
   margin: 0 auto;
 }
 .header__wrapper .header .logo__header {
@@ -827,6 +808,23 @@ article.article--career ul li {
   padding: 0 0 0 10px;
 }
 
+/** responsive **/
+/* (0px above)----------- */
+@media only screen and (min-width: 0px) {
+  .header {
+    width: 95%;
+  }
+}
+/* (480px above)----------- */
+/* (768px above)----------- */
+/* (1024px above)----------- */
+/* (1360px above)----------- */
+@media only screen and (min-width: 1360px) {
+  .header {
+    width: 1100px;
+  }
+}
+/* (1900px above)----------- */
 input, form, select, textarea {
   font-family: 'Open Sans', sans-serif;
 }
@@ -841,8 +839,7 @@ input, textarea, select {
   color: #5b6681;
   padding: 4px 5px;
   vertical-align: middle;
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-size: 12px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -958,11 +955,11 @@ input[type="radio"]:checked + label:after {
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #444;
+  color: #ccc;
 }
 
 input:-moz-placeholder, textarea:-moz-placeholder {
-  color: #444;
+  color: #ccc;
 }
 
 form .form__input__wrapper {
@@ -992,12 +989,12 @@ form .form__input__wrapper span.info--error {
 }
 form .form__input__wrapper input.newsletter--input {
   width: 80%;
-  height: 52px;
+  height: 47px;
   border-radius: 3px 0 0 3px;
   margin: 0 0 0 0;
   padding: 0 10px;
   background: #fff;
-  font-size: 18px;
+  font-size: 16px;
   color: #444;
   border: none;
 }
@@ -1019,11 +1016,11 @@ button, a {
 }
 button.share--btn, button.newsletter--btn, a.share--btn, a.newsletter--btn {
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 100;
   color: #fff;
   text-align: center;
-  padding: 8px 14px;
+  padding: 6px 12px 8px 12px;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 25px;
 }
@@ -1032,9 +1029,10 @@ button.share--btn:hover, button.newsletter--btn:hover, a.share--btn:hover, a.new
 }
 button.newsletter--btn, a.newsletter--btn {
   width: 29%;
-  height: 50px;
-  font-family: calibri;
-  font-size: 22px;
+  height: 45px;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 600;
   background: #ff6633;
   box-shadow: 0px 3px 0px #c1431f;
   border-radius: 3px;
@@ -1045,6 +1043,7 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
 
 /** responsive **/
 /* (1024px above)----------- */
+/* (1360 above)----------- */
 /* icons */
 .share--icon {
   width: 16px;
@@ -1181,7 +1180,6 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
 .ss__wrapper {
   position: relative !important;
   margin: 0 auto;
-  width: 960px;
 }
 .ss__wrapper .ss__page__wrapper {
   position: absolute !important;
@@ -1196,7 +1194,6 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   width: 350px;
   height: 100vh;
   background-attachment: fixed !important;
-  background-position: center right !important;
 }
 .ss__wrapper .ss__page__wrapper .ss__page .ss__page1, .ss__wrapper .ss__page__wrapper .ss__page .ss__page2, .ss__wrapper .ss__page__wrapper .ss__page .ss__page3, .ss__wrapper .ss__page__wrapper .ss__page .ss__page4 {
   position: relative;
@@ -1205,22 +1202,20 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   width: 350px;
   height: 100vh;
   background-attachment: fixed !important;
-  background-position: center right !important;
   background: url("../images/frame_page1.png") repeat-x;
   z-index: 2;
 }
 .ss__wrapper .ss__page__wrapper .ss__page .ss__page1__left, .ss__wrapper .ss__page__wrapper .ss__page .ss__page1__right {
+  -o-transition: 0.6s all;
+  -ms-transition: 0.6s all;
+  -moz-transition: 0.6s all;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
   -o-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  -webkit-animation: moveLeft 0.5s ease forwards;
-  -moz-animation: moveLeft 0.5s ease forwards;
-  -o-animation: moveLeft 0.5s ease forwards;
-  animation: moveLeft 0.5s ease forwards;
-  opacity: 0;
-  left: 40px;
   top: 50%;
   position: absolute;
   margin: auto;
@@ -1229,14 +1224,16 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   height: 500px;
   z-index: 1;
 }
+.ss__wrapper .ss__page__wrapper .ss__page .ss__page1__left.left, .ss__wrapper .ss__page__wrapper .ss__page .left.ss__page1__right {
+  opacity: 0;
+  left: 40px;
+}
 .ss__wrapper .ss__page__wrapper .ss__page .ss__page1__right {
-  left: initial !important;
-  -webkit-animation: moveRight 0.5s ease forwards;
-  -moz-animation: moveRight 0.5s ease forwards;
-  -o-animation: moveRight 0.5s ease forwards;
-  animation: moveRight 0.5s ease forwards;
-  right: 40px;
   background: url("../images/frame_page1_right.png") no-repeat;
+}
+.ss__wrapper .ss__page__wrapper .ss__page .ss__page1__right.right {
+  opacity: 0;
+  right: 40px;
 }
 .ss__wrapper .ss__page__wrapper .ss__page .ss__page2 {
   background: url("../images/frame_page2.png") repeat-x;
@@ -1264,7 +1261,6 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   position: relative;
   display: inline-block;
   height: 100vh;
-  width: 960px;
   margin: 0 0;
   text-align: left;
 }
@@ -1276,25 +1272,45 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   transform: translateY(-50%);
   position: relative;
   top: 50%;
-  width: 575px;
+  width: 585px;
 }
-.page1__wrapper .page1 .description__page h1, .page2__wrapper .page1 .description__page h1, .page4__wrapper .page1 .description__page h1, .page3__wrapper .page1 .description__page h1, .page5__wrapper .page1 .description__page h1, .page2__wrapper .page2 .description__page h1, .page4__wrapper .page2 .description__page h1, .page4__wrapper .page4 .description__page h1, .page3__wrapper .page3 .description__page h1, .page5__wrapper .page5 .description__page h1 {
+.page1__wrapper .page1 .description__page div, .page2__wrapper .page1 .description__page div, .page4__wrapper .page1 .description__page div, .page3__wrapper .page1 .description__page div, .page5__wrapper .page1 .description__page div, .page2__wrapper .page2 .description__page div, .page4__wrapper .page2 .description__page div, .page4__wrapper .page4 .description__page div, .page3__wrapper .page3 .description__page div, .page5__wrapper .page5 .description__page div {
+  -o-transition: 1s all;
+  -ms-transition: 1s all;
+  -moz-transition: 1s all;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+.page1__wrapper .page1 .description__page div h1, .page2__wrapper .page1 .description__page div h1, .page4__wrapper .page1 .description__page div h1, .page3__wrapper .page1 .description__page div h1, .page5__wrapper .page1 .description__page div h1, .page2__wrapper .page2 .description__page div h1, .page4__wrapper .page2 .description__page div h1, .page4__wrapper .page4 .description__page div h1, .page3__wrapper .page3 .description__page div h1, .page5__wrapper .page5 .description__page div h1 {
   color: #fff;
   text-shadow: 0px 1px 3px #777;
 }
-.page1__wrapper .page1 .description__page h1 font, .page2__wrapper .page1 .description__page h1 font, .page4__wrapper .page1 .description__page h1 font, .page3__wrapper .page1 .description__page h1 font, .page5__wrapper .page1 .description__page h1 font, .page2__wrapper .page2 .description__page h1 font, .page4__wrapper .page2 .description__page h1 font, .page4__wrapper .page4 .description__page h1 font, .page3__wrapper .page3 .description__page h1 font, .page5__wrapper .page5 .description__page h1 font {
+.page1__wrapper .page1 .description__page div h1 font, .page2__wrapper .page1 .description__page div h1 font, .page4__wrapper .page1 .description__page div h1 font, .page3__wrapper .page1 .description__page div h1 font, .page5__wrapper .page1 .description__page div h1 font, .page2__wrapper .page2 .description__page div h1 font, .page4__wrapper .page2 .description__page div h1 font, .page4__wrapper .page4 .description__page div h1 font, .page3__wrapper .page3 .description__page div h1 font, .page5__wrapper .page5 .description__page div h1 font {
   color: #ff6633;
   font-weight: 800;
   text-decoration: underline;
   text-shadow: 0px 1px 1px #000;
 }
-.page1__wrapper .page1 .description__page p, .page2__wrapper .page1 .description__page p, .page4__wrapper .page1 .description__page p, .page3__wrapper .page1 .description__page p, .page5__wrapper .page1 .description__page p, .page2__wrapper .page2 .description__page p, .page4__wrapper .page2 .description__page p, .page4__wrapper .page4 .description__page p, .page3__wrapper .page3 .description__page p, .page5__wrapper .page5 .description__page p {
+.page1__wrapper .page1 .description__page div.desc, .page2__wrapper .page1 .description__page div.desc, .page4__wrapper .page1 .description__page div.desc, .page3__wrapper .page1 .description__page div.desc, .page5__wrapper .page1 .description__page div.desc, .page2__wrapper .page2 .description__page div.desc, .page4__wrapper .page2 .description__page div.desc, .page4__wrapper .page4 .description__page div.desc, .page3__wrapper .page3 .description__page div.desc, .page5__wrapper .page5 .description__page div.desc {
+  -o-transition: 1s all;
+  -ms-transition: 1s all;
+  -moz-transition: 1s all;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+.page1__wrapper .page1 .description__page div.desc p, .page2__wrapper .page1 .description__page div.desc p, .page4__wrapper .page1 .description__page div.desc p, .page3__wrapper .page1 .description__page div.desc p, .page5__wrapper .page1 .description__page div.desc p, .page2__wrapper .page2 .description__page div.desc p, .page4__wrapper .page2 .description__page div.desc p, .page4__wrapper .page4 .description__page div.desc p, .page3__wrapper .page3 .description__page div.desc p, .page5__wrapper .page5 .description__page div.desc p {
   width: 80%;
   text-shadow: 0px 1px 3px #444;
   text-shadow: none;
 }
-.page1__wrapper .page1 .description__page .newsletter--span, .page2__wrapper .page1 .description__page .newsletter--span, .page4__wrapper .page1 .description__page .newsletter--span, .page3__wrapper .page1 .description__page .newsletter--span, .page5__wrapper .page1 .description__page .newsletter--span, .page2__wrapper .page2 .description__page .newsletter--span, .page4__wrapper .page2 .description__page .newsletter--span, .page4__wrapper .page4 .description__page .newsletter--span, .page3__wrapper .page3 .description__page .newsletter--span, .page5__wrapper .page5 .description__page .newsletter--span {
+.page1__wrapper .page1 .description__page .newsletter, .page2__wrapper .page1 .description__page .newsletter, .page4__wrapper .page1 .description__page .newsletter, .page3__wrapper .page1 .description__page .newsletter, .page5__wrapper .page1 .description__page .newsletter, .page2__wrapper .page2 .description__page .newsletter, .page4__wrapper .page2 .description__page .newsletter, .page4__wrapper .page4 .description__page .newsletter, .page3__wrapper .page3 .description__page .newsletter, .page5__wrapper .page5 .description__page .newsletter {
+  -o-transition: 1s all;
+  -ms-transition: 1s all;
+  -moz-transition: 1s all;
+  -webkit-transition: 1s all;
+  transition: 1s all;
   display: inline-block;
+  margin-top: 20px;
 }
 
 .page2__wrapper, .page4__wrapper {
@@ -1302,11 +1318,14 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
   height: 100vh;
   background: #fff;
 }
-.page2__wrapper .page2 .description__page h1, .page4__wrapper .page2 .description__page h1, .page4__wrapper .page4 .description__page h1 {
+.page2__wrapper .page2 .description__page, .page4__wrapper .page2 .description__page, .page4__wrapper .page4 .description__page {
+  min-height: 400px;
+}
+.page2__wrapper .page2 .description__page div h1, .page4__wrapper .page2 .description__page div h1, .page4__wrapper .page4 .description__page div h1 {
   color: #424242;
   text-shadow: none;
 }
-.page2__wrapper .page2 .description__page p, .page4__wrapper .page2 .description__page p, .page4__wrapper .page4 .description__page p {
+.page2__wrapper .page2 .description__page div p, .page4__wrapper .page2 .description__page div p, .page4__wrapper .page4 .description__page div p {
   color: #797970;
   text-shadow: none;
 }
@@ -1314,14 +1333,17 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
 .page3__wrapper {
   background: #ff6633;
 }
-.page3__wrapper .page3 .description__page h1 {
+.page3__wrapper .page3 .description__page {
+  min-height: 400px;
+}
+.page3__wrapper .page3 .description__page div h1 {
   color: #424242;
   text-shadow: none;
 }
-.page3__wrapper .page3 .description__page h1 font {
+.page3__wrapper .page3 .description__page div h1 font {
   color: #fff;
 }
-.page3__wrapper .page3 .description__page p {
+.page3__wrapper .page3 .description__page div p {
   color: #6B2A11;
   text-shadow: none;
 }
@@ -1329,9 +1351,15 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
 .page4__wrapper {
   background: #fff;
 }
+.page4__wrapper .page4 .description__page {
+  min-height: 400px;
+}
 
 .page5__wrapper {
   background: #272625;
+}
+.page5__wrapper .page5 .description__page {
+  min-height: 400px;
 }
 .page5__wrapper .page5 .description__page p {
   color: #797970;
@@ -1339,10 +1367,43 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
 
 /** responsive **/
 /* (0px above)----------- */
+@media only screen and (min-width: 0px) {
+  .ss__wrapper {
+    width: 87%;
+  }
+
+  .page1, .page2__wrapper .page2, .page4__wrapper .page2, .page4__wrapper .page4, .page3__wrapper .page3, .page5__wrapper .page5 {
+    width: 90%;
+  }
+}
 /* (480px above)----------- */
 /* (768px above)----------- */
 /* (1024px above)----------- */
+@media only screen and (min-width: 1024px) {
+  .ss__page {
+    background-position: 135px !important;
+  }
+  .ss__page .ss__page1, .ss__wrapper .ss__page__wrapper .ss__page .ss__page2, .ss__wrapper .ss__page__wrapper .ss__page .ss__page3, .ss__wrapper .ss__page__wrapper .ss__page .ss__page4 {
+    background-position: 135px !important;
+  }
+}
 /* (1360px above)----------- */
+@media only screen and (min-width: 1360px) {
+  .ss__wrapper {
+    width: 960px;
+  }
+
+  .ss__page {
+    background-position: -92px !important;
+  }
+  .ss__page .ss__page1, .ss__wrapper .ss__page__wrapper .ss__page .ss__page2, .ss__wrapper .ss__page__wrapper .ss__page .ss__page3, .ss__wrapper .ss__page__wrapper .ss__page .ss__page4 {
+    background-position: -92px !important;
+  }
+
+  .page1, .page2__wrapper .page2, .page4__wrapper .page2, .page4__wrapper .page4, .page3__wrapper .page3, .page5__wrapper .page5 {
+    width: 960px;
+  }
+}
 /* (1900px above)----------- */
 /**
  * fullPage 2.6.0

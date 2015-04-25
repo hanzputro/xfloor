@@ -48,7 +48,7 @@
 .ss__wrapper{
 	position: relative !important;
 	margin: 0 auto;
-	width: 960px;
+	// width: 960px;
 	.ss__page__wrapper{
 		position:absolute !important;
 		width:100%;
@@ -62,8 +62,7 @@
 			width:350px;
 			height:100vh; 
 			background-attachment:fixed !important;
-			background-position: center right !important;
-			// background-size: 100% 100% !important;
+			// background-position: -92px !important;
 				.ss__page1{
 					position:relative;
 					float:right;
@@ -71,18 +70,17 @@
 					width:350px;
 					height:100vh; 
 					background-attachment:fixed !important;
-					background-position: center right !important;
+					// background-position: -92px !important;
 					background:url("../images/frame_page1.png") repeat-x;
 					z-index:2;					
 				}
 				.ss__page1__left{
+					@include delay(0.6s all);
 					@include transform (translateY(-50%));
-					-webkit-animation: moveLeft 0.5s ease forwards;
-					-moz-animation: moveLeft 0.5s ease forwards;
-					-o-animation: moveLeft 0.5s ease forwards;
-					animation: moveLeft 0.5s ease forwards;
-					opacity:0;
-					left:40px;
+					// -webkit-animation: moveLeft 0.5s ease forwards;
+					// -moz-animation: moveLeft 0.5s ease forwards;
+					// -o-animation: moveLeft 0.5s ease forwards;
+					// animation: moveLeft 0.5s ease forwards;										
 					top:50%;
 					position:absolute;
 					margin:auto;
@@ -90,16 +88,22 @@
 					width:206px;
 					height:500px;
 					z-index:1;
+					&.left{
+						opacity:0;
+						left:40px;
+					}
 				}
 				.ss__page1__right{
-					@extend .ss__page1__left;
-					left:initial !important;
-					-webkit-animation: moveRight 0.5s ease forwards;
-					-moz-animation: moveRight 0.5s ease forwards;
-					-o-animation: moveRight 0.5s ease forwards;
-					animation: moveRight 0.5s ease forwards;
-					right:40px;
+					@extend .ss__page1__left;					
+					// -webkit-animation: moveRight 0.5s ease forwards;
+					// -moz-animation: moveRight 0.5s ease forwards;
+					// -o-animation: moveRight 0.5s ease forwards;
+					// animation: moveRight 0.5s ease forwards;					
 					background:url("../images/frame_page1_right.png") no-repeat;
+					&.right{
+						opacity:0;
+						right:40px;
+					}
 				}
 				.ss__page2{
 					@extend .ss__page1;
@@ -133,32 +137,40 @@
 			position: relative;
 			display: inline-block;
 			height:100vh;
-			width: 960px;
+			// width: 960px;
 			margin:0 0;
 			text-align:left;
 				.description__page{
 					@include transform (translateY(-50%));
 					position:relative;
 					top:50%;
-					width:575px;
-					h1{
-						color:#fff;
-						text-shadow: 0px 1px 3px #777;
-							font{
-								color:#ff6633;
-								font-weight:800;
-								text-decoration: underline;
-								text-shadow: 0px 1px 1px #000;
+					width:585px;
+					div{
+						@include delay(1s all);
+						h1{
+							color:#fff;
+							text-shadow: 0px 1px 3px #777;
+								font{
+									color:#ff6633;
+									font-weight:800;
+									text-decoration: underline;
+									text-shadow: 0px 1px 1px #000;
+								}
+						}
+						&.desc{
+							@include delay(1s all);
+							p{
+								width:80%;
+								text-shadow: 0px 1px 3px #444;
+								text-shadow:none;							
 							}
+						}
 					}
-					p{
-						width:80%;							
-						text-shadow: 0px 1px 3px #444;
-						text-shadow:none;
-					}
-					.newsletter--span{
+					.newsletter{
+						@include delay(1s all);
 						display: inline-block;
-					}
+						margin-top:20px;
+					}					
 				}
 				// .ss__page{
 				// 	display: inline-block;
@@ -187,6 +199,8 @@
 		.page2{
 			@extend .page1;
 				.description__page{
+					min-height: 400px;
+					div{
 						h1{
 							color:#424242;
 							text-shadow: none;
@@ -199,6 +213,7 @@
 							text-shadow: none;
 
 						}
+					}						
 				}
 				// .ss__page{
 
@@ -213,6 +228,8 @@
 		.page3{
 			@extend .page1;
 				.description__page{
+					min-height: 400px;
+					div{
 						h1{
 							color:#424242;
 							text-shadow: none;
@@ -225,7 +242,7 @@
 							text-shadow: none;
 
 						}
-
+					}
 				}
 				// .ss__page{
 
@@ -240,11 +257,10 @@
 		.page4{
 			@extend .page2;
 				.description__page{
+					min-height: 400px;
 				}
 				// .ss__page{
-
-				// }
-			
+				// }			
 		}
 }
 .page5__wrapper{
@@ -254,14 +270,13 @@
 		.page5{
 			@extend .page1;
 				.description__page{
+					min-height: 400px;
 						p{
 							color:#797970;
 						}
 				}
 				// .ss__page{
-
 				// }
-			
 		}
 }
 /** responsive **/
@@ -269,6 +284,12 @@
 /* (0px above)----------- */
 @media only screen 
 and (min-width : 0px) {
+	.ss__wrapper{
+		width: 87%;
+	}
+	.page1{
+		width: 90%;
+	}
 }
 
 /* (480px above)----------- */
@@ -284,11 +305,29 @@ and (min-width : 768px) {
 /* (1024px above)----------- */
 @media only screen 
 and (min-width : 1024px) {
+	.ss__page{
+		background-position: 135px !important;
+		.ss__page1{
+			background-position: 135px !important;
+		}
+	}
 }
 
 /* (1360px above)----------- */
 @media only screen 
 and (min-width : 1360px) {
+	.ss__wrapper{
+		width: 960px;
+	}
+	.ss__page{
+		background-position: -92px !important;
+		.ss__page1{
+			background-position: -92px !important;
+		}
+	}
+	.page1{
+		width:960px;
+	}
 }
 
 /* (1900px above)----------- */

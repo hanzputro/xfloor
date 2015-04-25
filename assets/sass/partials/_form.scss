@@ -15,9 +15,9 @@ input, textarea,select {
 	padding:4px 5px;
 	// border: 1px solid #cfcfcf;
 	vertical-align: middle;
-	font-size:14px;
+	font-size:12px;
 	// font-style: italic;
-	letter-spacing:1px;
+	// letter-spacing:1px;
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -145,10 +145,10 @@ input[type="radio"]:checked + label:after {
 
 //////// form style
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #444;
+  color: #ccc;
 }
 input:-moz-placeholder, textarea:-moz-placeholder {
-  color: #444;
+  color: #ccc;
 }
 
 form{
@@ -178,12 +178,12 @@ form{
 			}
 			input.newsletter--input{
 				width:80%;
-				height:52px;
+				height:47px;
 				border-radius:3px 0 0 3px;
 				margin:0 0 0 0;
 				padding:0 10px;
 				background: #fff;
-				font-size:18px;
+				font-size:16px;
 				color:#444;
 				border:none;
 			}
