@@ -1396,7 +1396,41 @@ button.newsletter--btn:hover, a.newsletter--btn:hover {
     width: 960px;
   }
 }
+/* (1440px above)----------- */
+@media only screen and (min-width: 1440px) {
+  .ss__page {
+    background-position: -53px !important;
+  }
+  .ss__page .ss__page1, .ss__wrapper .ss__page__wrapper .ss__page .ss__page2, .ss__wrapper .ss__page__wrapper .ss__page .ss__page3, .ss__wrapper .ss__page__wrapper .ss__page .ss__page4 {
+    background-position: -53px !important;
+  }
+
+  .page1, .page2__wrapper .page2, .page4__wrapper .page2, .page4__wrapper .page4, .page3__wrapper .page3, .page5__wrapper .page5 {
+    width: 960px;
+  }
+}
+/* (1680px above)----------- */
+@media only screen and (min-width: 1680px) {
+  .ss__page {
+    background-position: 68px !important;
+  }
+  .ss__page .ss__page1, .ss__wrapper .ss__page__wrapper .ss__page .ss__page2, .ss__wrapper .ss__page__wrapper .ss__page .ss__page3, .ss__wrapper .ss__page__wrapper .ss__page .ss__page4 {
+    background-position: 68px !important;
+  }
+
+  .page1, .page2__wrapper .page2, .page4__wrapper .page2, .page4__wrapper .page4, .page3__wrapper .page3, .page5__wrapper .page5 {
+    width: 960px;
+  }
+}
 /* (1900px above)----------- */
+@media only screen and (min-width: 1900px) {
+  .ss__page {
+    background-position: -187px !important;
+  }
+  .ss__page .ss__page1, .ss__wrapper .ss__page__wrapper .ss__page .ss__page2, .ss__wrapper .ss__page__wrapper .ss__page .ss__page3, .ss__wrapper .ss__page__wrapper .ss__page .ss__page4 {
+    background-position: -187px !important;
+  }
+}
 /**
  * fullPage 2.6.0
  * https://github.com/alvarotrigo/fullPage.js
